@@ -51,12 +51,4 @@ print("Molar volume of supercritical fluid: {0:.5f}".format(answers[2].real))
 
 #%%
 
-X = np.arange(0, 2, 0.1)
-Z = np.arange(0, 2, 0.1)
-X, Z = np.meshgrid(X, Z)
-Y = np.polynomial.Polynomial([-a * b, a, -(X * b + R * Z), X])
-
-fig, ax = plt.subplots(subplot_kw={"projection": "3d"})
-surf = ax.plot_surface(X, Y, Z)
-plt.show()
 
